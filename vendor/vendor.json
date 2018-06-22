@@ -1,0 +1,37 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "eyXP+FOq/7Yi5AHRLchweAtraq0=",
+			"path": "github.com/sirupsen/logrus",
+			"revision": "75068beb13ada9c0ddde611f678523fda7352650",
+			"revisionTime": "2018-06-18T11:14:19Z"
+		},
+		{
+			"checksumSHA1": "BGm8lKZmvJbf/YOJLeL1rw2WVjA=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "027cca12c2d63e3d62b670d901e8a2c95854feec",
+			"revisionTime": "2018-06-16T23:55:11Z"
+		},
+		{
+			"checksumSHA1": "g0ElG8ZOLLoSol7KoLtx9o7WFgg=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "6c888cc515d3ed83fc103cf1d84468aad274b0a7",
+			"revisionTime": "2018-06-14T09:16:56Z"
+		},
+		{
+			"checksumSHA1": "zc2NI38L40/N4+pjd9P2ESz68/0=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "6c888cc515d3ed83fc103cf1d84468aad274b0a7",
+			"revisionTime": "2018-06-14T09:16:56Z"
+		},
+		{
+			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "5420a8b6744d3b0345ab293f6fcba19c978f1183",
+			"revisionTime": "2018-03-28T19:50:20Z"
+		}
+	],
+	"rootPath": "github.com/mkobaly/insteon"
+}
