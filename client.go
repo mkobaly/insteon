@@ -67,7 +67,7 @@ func (c *Client) Authenticate(clientID string, username string, password string)
 }
 
 // RefreshToken will refresh the authorization token used to authenticate with Insteon REST API
-func (c *Client) RefreshToken(refreshToken string) error {
+func (c *Client) RefreshToken() error {
 	if c.authorization == nil {
 		return errors.New("must authenticate first")
 	}
@@ -75,7 +75,7 @@ func (c *Client) RefreshToken(refreshToken string) error {
 	v := url.Values{}
 	v.Set("grant_type", "refresh_token")
 	v.Set("client_id", c.authorization.ClientID)
-	v.Set("refresh_token", refreshToken)
+	v.Set("refresh_token", c.authorization.RefreshToken)
 	data := v.Encode()
 
 	var b BearerResponse
