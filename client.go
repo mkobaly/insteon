@@ -146,9 +146,9 @@ func (c *Client) doRequest(method string, path string, data interface{}, v inter
 }
 
 func (c *Client) doJSONRequest(method string, path string, data interface{}) ([]byte, error) {
-	if !strings.HasPrefix(path, "/") {
-		path = "/" + path
-	}
+	// if !strings.HasPrefix(path, "/") {
+	// 	path = "/" + path
+	// }
 
 	var body io.Reader
 	if data != nil {
@@ -159,7 +159,7 @@ func (c *Client) doJSONRequest(method string, path string, data interface{}) ([]
 		body = bytes.NewBuffer(jsonReq)
 	}
 
-	req, _ := http.NewRequest(method, c.baseURL+path, body)
+	req, _ := http.NewRequest(method, path, body)
 	req.Header.Add("Authentication", "APIKey "+c.authorization.ClientID)
 	req.Header.Add("Authorization", "Bearer "+c.authorization.AccessToken)
 
