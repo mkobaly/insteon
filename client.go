@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	log "github.com/sirupsen/logrus"
+	//log "github.com/sirupsen/logrus"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -179,7 +179,7 @@ func withRetry(retries int, f func() error) (err error) {
 	for i := 0; i < retries; i++ {
 		err = f()
 		if err != nil {
-			log.Printf("Retry: %v / %v, error: %v\n", i, retries, err)
+			fmt.Printf("Retry: %v / %v, error: %v\n", i, retries, err)
 		} else {
 			return
 		}
